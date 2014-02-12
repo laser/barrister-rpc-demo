@@ -46,6 +46,7 @@ module UserManagement
 
     def on_delete(user_id)
       @client.UserService.delete_user_by_id user_id
+
       puts UserManagement::UsersView.new(@client.UserService.get_all_users).render
     end
 
@@ -53,6 +54,7 @@ module UserManagement
 
     def obtain(prop_name, existing_user={})
       print UserManagement::SimplePromptView.new(prop_name, existing_user[prop_name]).render
+
       new_value = gets.chomp
       new_value = new_value.empty? ? existing_user[prop_name] : new_value
     end
