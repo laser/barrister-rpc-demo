@@ -1,4 +1,4 @@
-module UserManagement
+module TerminalClient
 
   DATA_WIDTHS  = [5, 20, 20, 20]
   NEWLINE      = "\n"

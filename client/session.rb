@@ -4,7 +4,7 @@ require_relative './views'
 
 require 'barrister'
 
-module UserManagement
+module TerminalClient
 
   class Session
 
