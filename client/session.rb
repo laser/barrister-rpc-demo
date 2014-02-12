@@ -24,8 +24,8 @@ module TerminalClient
         case action = gets.chomp
         when '?', 'help'
           @controller.on_help
-        when 'add'
-          @controller.on_add
+        when 'create'
+          @controller.on_create
         when EDIT_REGEX
           @controller.on_edit int_from_action(action, EDIT_REGEX)
         when DEL_REGEX

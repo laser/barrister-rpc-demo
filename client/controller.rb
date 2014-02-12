@@ -18,7 +18,7 @@ module TerminalClient
       puts HelpView.new().render
     end
 
-    def on_add
+    def on_create
       @client.UserService.create_user({
         "full_name"    => obtain('full_name'),
         "email"        => obtain('email'),
