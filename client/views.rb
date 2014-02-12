@@ -6,8 +6,6 @@ module UserManagement
   DIVIDER      = "+#{"-" * (DATA_WIDTHS.reduce(:+) + ROW_TEMPLATE.size - (DATA_WIDTHS.size * 2) - NEWLINE.size - 1)}+"
   LD_WS_REGEX  = /^( |\t)+/
 
-  module_function
-
   class HelpView
 
     def render
