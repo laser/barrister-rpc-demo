@@ -1,6 +1,4 @@
-require_relative '../lib/barrister_intra_process_container'
 require_relative '../lib/barrister_intra_process_transport'
-require_relative '../user_service'
 require_relative './controller'
 require_relative './views'
 
@@ -13,9 +11,8 @@ module UserManagement
     EDIT_REGEX = /edit (\d+)/
     DEL_REGEX  = /delete (\d+)/
 
-    def initialize
-      container     = Barrister::IntraProcessContainer.new './user_service.json', UserService
-      transport     = Barrister::IntraProcessTransport.new container
+    def initialize(service_container)
+      transport     = Barrister::IntraProcessTransport.new service_container
       client        = Barrister::Client.new transport
       @controller   = SessionController.new client
     end
