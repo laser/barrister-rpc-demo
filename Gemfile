@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'colorize'
+gem 'activerecord'
+gem 'barrister'
 gem 'pry'
+gem 'sqlite3'
