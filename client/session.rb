@@ -11,10 +11,8 @@ module TerminalClient
     EDIT_REGEX = /edit (\d+)/
     DEL_REGEX  = /delete (\d+)/
 
-    def initialize(service_container)
-      transport     = Barrister::IntraProcessTransport.new service_container
-      client        = Barrister::Client.new transport
-      @controller   = SessionController.new client
+    def initialize(rpc_client)
+      @controller   = SessionController.new rpc_client
     end
 
     def begin
