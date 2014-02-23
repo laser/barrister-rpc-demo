@@ -1,11 +1,6 @@
 require 'active_record'
 require 'barrister'
-
-class User < ActiveRecord::Base
-  validates_presence_of :full_name, :phone_number, :email
-
-  validates :email, uniqueness: true
-end
+require_relative 'models.rb'
 
 class UserService
 
