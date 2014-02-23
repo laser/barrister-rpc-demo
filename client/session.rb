@@ -1,8 +1,5 @@
-require_relative '../lib/barrister_intra_process_transport'
 require_relative './controller'
 require_relative './views'
-
-require 'barrister'
 
 module TerminalClient
 

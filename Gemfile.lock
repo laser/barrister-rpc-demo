@@ -20,6 +20,8 @@ GEM
     atomic (1.1.14)
     barrister (0.1.1)
       json (>= 1.5.0)
+    barrister-intraprocess (0.1.0)
+      barrister (~> 0)
     builder (3.1.4)
     coderay (1.1.0)
     i18n (0.6.9)
@@ -43,5 +45,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   barrister
+  barrister-intraprocess
   pry
   sqlite3
